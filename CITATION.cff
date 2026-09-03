@@ -4,6 +4,7 @@ message: "If you use HullProd in scientific work, please cite the software and t
 title: "HullProd: Geometry-Based Producibility Metrics for Ship Hull Forms"
 version: "1.0.1"
 date-released: 2026-09-03
+doi: "10.5281/zenodo.22288105"
 authors:
   - family-names: "Serani"
     given-names: "Andrea"
