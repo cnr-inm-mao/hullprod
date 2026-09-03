@@ -56,28 +56,3 @@ and output-layout contracts.
   triangle/mesh-quality quantities are representation diagnostics.
 - HullProd does not provide a fabrication-cost, man-hour, forming-route, or
   shipyard-calibrated composite score.
-
-## [0.1.0] - 2026-06-25
-
-### Added
-
-- Initial research prototype of HullProd.
-- Command-line interface through `hullprod assess`.
-- Python API through `assess_hull`.
-- Geometry-based producibility metrics from triangulated external hull surfaces:
-  - curvature energy;
-  - curvature fairness / curvature variation;
-  - developability deviation;
-  - thresholded developability area ratio;
-  - curvature-class area distribution;
-  - section waviness;
-  - local plate twist.
-- JSON and CSV metric export.
-- Optional diagnostic plots.
-- Analytic smoke tests on simple reference geometries.
-
-### Notes
-
-- This is a research prototype / pre-alpha release.
-- The package does not provide cost, man-hour, shipyard-specific, structural, or fabrication-planning predictions.
-- Curvature-based metrics require mesh-quality checks and mesh-sensitivity analysis before publication-level use.
