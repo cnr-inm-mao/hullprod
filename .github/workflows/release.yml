@@ -1,0 +1,61 @@
+name: Publish to PyPI
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    name: Publish verified release artifacts
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/hullprod
+    permissions:
+      id-token: write
+      contents: read
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'release' && github.event.release.tag_name || 'v1.0.0' }}
+
+    steps:
+      - name: Require main for manual publication
+        if: github.event_name == 'workflow_dispatch'
+        run: test "$GITHUB_REF" = "refs/heads/main"
+
+      - name: Download GitHub Release artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir dist
+          gh release download "$RELEASE_TAG" \
+            --repo "$GITHUB_REPOSITORY" \
+            --dir dist \
+            --pattern 'hullprod-*.whl' \
+            --pattern 'hullprod-*.tar.gz'
+
+      - name: Verify release artifact set
+        run: |
+          set -euo pipefail
+          test "$(find dist -maxdepth 1 -type f -name 'hullprod-*.whl' | wc -l)" -ge 1
+          test "$(find dist -maxdepth 1 -type f -name 'hullprod-*.tar.gz' | wc -l)" -eq 1
+          test "$(find dist -maxdepth 1 -type f | wc -l)" -eq \
+            "$(( $(find dist -maxdepth 1 -type f -name 'hullprod-*.whl' | wc -l) + 1 ))"
+
+      - name: Verify v1.0.0 authoritative hashes
+        if: env.RELEASE_TAG == 'v1.0.0'
+        working-directory: dist
+        run: |
+          set -euo pipefail
+          printf '%s  %s\n' \
+            '13d717b51de6e01b7c501287304e91c5c30d07ac916a9effc0997daa9eed3c6f' \
+            'hullprod-1.0.0-py3-none-any.whl' \
+            '079dba663b94d3b4913194517207000ad0e0827a8e3812a3743aea49e70bacba' \
+            'hullprod-1.0.0.tar.gz' \
+            | sha256sum --check --strict
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.14.2
+        with:
+          packages-dir: dist/
