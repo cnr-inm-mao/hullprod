@@ -10,6 +10,7 @@
 
 [![CI](https://github.com/cnr-inm-mao/hullprod/actions/workflows/ci.yml/badge.svg)](https://github.com/cnr-inm-mao/hullprod/actions/workflows/ci.yml)
 [![PyPI version](https://img.shields.io/pypi/v/hullprod.svg)](https://pypi.org/project/hullprod/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22287357.svg)](https://doi.org/10.5281/zenodo.22287357)
 ![Python 3.10–3.12](https://img.shields.io/badge/python-3.10%E2%80%933.12-blue)
 [![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue)](LICENSE)
 
@@ -175,9 +176,16 @@ Naval Research.
 
 ## Citation
 
-Please cite the software using [CITATION.cff](CITATION.cff). Cite the associated
-manuscript once final publication metadata are available; no DOI or journal
-record is claimed here before publication.
+If you use HullProd in scientific work, please cite the archived software
+release:
+
+> Serani, A. (2026). *HullProd: Geometry-Based Producibility Metrics for Ship
+> Hull Forms* (Version 1.0.0) [Computer software]. Zenodo.
+> https://doi.org/10.5281/zenodo.22287357
+
+Machine-readable citation metadata are provided in
+[CITATION.cff](CITATION.cff). Please also cite the associated scientific
+publication once its final journal metadata are available.
 
 ## Contributing
 
