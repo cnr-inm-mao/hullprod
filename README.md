@@ -165,10 +165,9 @@ the recommended signature. Their status is explained in
 ## Funding
 
 Development of HullProd was supported by the U.S. Office of Naval Research
-(ONR) through the Naval International Cooperative Opportunities in Science and
-Technology (NICOP) program, under Grant No. N00014-26-1-2164, as part of the
-BEAM project (*Bayesian Exploration and Optimization for Hull-form Architecture
-and Producibility Modeling*).
+(ONR), under Grant No. N00014-26-1-2164, as part of the BEAM project
+(*Bayesian Exploration and Optimization for Hull-form Architecture and
+Producibility Modeling*).
 
 The views and conclusions expressed in this software and its documentation are
 those of the authors and do not necessarily reflect the views of the Office of
