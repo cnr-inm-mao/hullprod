@@ -1,5 +1,13 @@
 # HullProd
 
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/cnr-inm-mao/hullprod/main/assets/branding/hullprod-logo-horizontal.png"
+    alt="HullProd logo"
+    width="420"
+  >
+</p>
+
 [![CI](https://github.com/cnr-inm-mao/hullprod/actions/workflows/ci.yml/badge.svg)](https://github.com/cnr-inm-mao/hullprod/actions/workflows/ci.yml)
 ![Python 3.10–3.12](https://img.shields.io/badge/python-3.10%E2%80%933.12-blue)
 [![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue)](LICENSE)
