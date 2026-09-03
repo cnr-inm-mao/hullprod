@@ -9,6 +9,7 @@
 # HullProd
 
 [![CI](https://github.com/cnr-inm-mao/hullprod/actions/workflows/ci.yml/badge.svg)](https://github.com/cnr-inm-mao/hullprod/actions/workflows/ci.yml)
+[![PyPI version](https://img.shields.io/pypi/v/hullprod.svg)](https://pypi.org/project/hullprod/)
 ![Python 3.10–3.12](https://img.shields.io/badge/python-3.10%E2%80%933.12-blue)
 [![License: BSD-3-Clause](https://img.shields.io/badge/license-BSD--3--Clause-blue)](LICENSE)
 
