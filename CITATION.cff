@@ -4,9 +4,12 @@ message: "If you use HullProd in scientific work, please cite the software and t
 title: "HullProd: Geometry-Based Producibility Metrics for Ship Hull Forms"
 version: "1.0.0"
 date-released: 2026-09-03
+doi: "10.5281/zenodo.22287357"
 authors:
   - family-names: "Serani"
     given-names: "Andrea"
+    orcid: "https://orcid.org/0000-0002-8814-1793"
+    affiliation: "CNR-INM, National Research Council–Institute of Marine Engineering"
 license: "BSD-3-Clause"
 repository-code: "https://github.com/cnr-inm-mao/hullprod"
 url: "https://github.com/cnr-inm-mao/hullprod"
