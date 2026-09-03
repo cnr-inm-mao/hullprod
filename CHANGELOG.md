@@ -7,7 +7,7 @@ breaking the public contract, minor releases add backward-compatible features,
 and major releases may change public schemas, formulas, CLI behavior, or field
 and output-layout contracts.
 
-## [1.0.0] - Unreleased
+## [1.0.0] - 2026-09-03
 
 ### Added
 
