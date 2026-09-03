@@ -7,6 +7,16 @@ breaking the public contract, minor releases add backward-compatible features,
 and major releases may change public schemas, formulas, CLI behavior, or field
 and output-layout contracts.
 
+## [1.0.1] - 2026-09-03
+
+### Fixed
+
+- Corrected the funding acknowledgment to identify BEAM as directly
+  supported by the U.S. Office of Naval Research under Grant
+  No. N00014-26-1-2164.
+- No scientific, numerical, API, or software-behavior changes are included
+  in this release.
+
 ## [1.0.0] - 2026-09-03
 
 ### Added

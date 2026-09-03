@@ -36,8 +36,8 @@ def test_version_and_primary_help_are_user_facing() -> None:
         capture_output=True,
         text=True,
     )
-    assert version.stdout.strip() == "hullprod 1.0.0"
-    assert __version__ == "1.0.0"
+    assert version.stdout.strip() == "hullprod 1.0.1"
+    assert __version__ == "1.0.1"
     help_result = subprocess.run(
         [sys.executable, "-m", "hullprod.cli", "--help"],
         check=True,
