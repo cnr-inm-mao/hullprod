@@ -1,0 +1,126 @@
+{
+  "scope": "retained_surface_signature_closing_audit",
+  "production_metric_definitions_changed": false,
+  "frozen_mesh_source": "benchmarks/results/paper_release/paper_metrics_all_resolutions.csv",
+  "frozen_native_source": "benchmarks/results/brep_native_multi_hull",
+  "improper_audit": {
+    "construction": "nested face-parameter neighborhoods around frozen-campaign degenerate roots",
+    "reported_abscissa": "excluded physical area fraction",
+    "convergence_test": "shrinking absolute-Gaussian-curvature neighborhood integral (Cauchy criterion)",
+    "parameterization_invariance_claimed": false,
+    "locations": {
+      "dtmb5415": [
+        {
+          "face": 1,
+          "kind": "point",
+          "u": 7.5,
+          "v": 0.0
+        }
+      ],
+      "jbc": [
+        {
+          "face": 43,
+          "kind": "u_max_edge",
+          "u": 1.0,
+          "v": 0.0
+        },
+        {
+          "face": 44,
+          "kind": "v_max_edge",
+          "u": 0.0,
+          "v": 1.0
+        }
+      ],
+      "kvlcc2m": [
+        {
+          "face": 3,
+          "kind": "point",
+          "u": 1.0,
+          "v": 1.0
+        },
+        {
+          "face": 5,
+          "kind": "point",
+          "u": 1.0,
+          "v": 1.0
+        },
+        {
+          "face": 9,
+          "kind": "point",
+          "u": 1.0,
+          "v": 0.0
+        },
+        {
+          "face": 11,
+          "kind": "point",
+          "u": 0.0,
+          "v": 1.0
+        },
+        {
+          "face": 13,
+          "kind": "point",
+          "u": 1.0,
+          "v": 0.0
+        },
+        {
+          "face": 13,
+          "kind": "point",
+          "u": 1.0,
+          "v": 1.0
+        },
+        {
+          "face": 14,
+          "kind": "point",
+          "u": 0.0,
+          "v": 1.0
+        },
+        {
+          "face": 14,
+          "kind": "point",
+          "u": 1.0,
+          "v": 1.0
+        },
+        {
+          "face": 21,
+          "kind": "point",
+          "u": 1.0,
+          "v": 0.0
+        },
+        {
+          "face": 22,
+          "kind": "point",
+          "u": 0.0,
+          "v": 1.0
+        },
+        {
+          "face": 27,
+          "kind": "point",
+          "u": 1.0,
+          "v": 1.0
+        },
+        {
+          "face": 28,
+          "kind": "point",
+          "u": 1.0,
+          "v": 1.0
+        }
+      ],
+      "kcs": []
+    }
+  },
+  "torus_reference": {
+    "R": 3.0,
+    "r": 1.0,
+    "length_ref": 8.0,
+    "I_D": 13.581221810508403,
+    "I_D_positive": 6.790610905254201,
+    "I_D_negative": 6.790610905254201,
+    "class_fraction_method": "closed-form integration of r(R+r cos(v)) over K-threshold intervals",
+    "class_fractions": {
+      "flat": 0.0,
+      "single": 2.9841551829612456e-06,
+      "elliptic": 0.6061018033135084,
+      "saddle": 0.39389521253130866
+    }
+  }
+}

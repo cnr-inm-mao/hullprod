@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Conda / virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Test and coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Lint/cache
+.ruff_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# HullProd generated outputs
+results*/
+*_results/
+*_hullprod/
+
+# Generated/local geometry and visualization files
+*.vtk
+*.vtp
+*.ply
+*.stl
+*.obj
+*.off
+
+# The two package-owned analytical examples are intentional source resources.
+!hullprod/examples/simple_sphere.stl
+
+# Local benchmark data not necessarily redistributable
+data/
+benchmarks/data/
+geometries/
+
+# Per-case authoritative source downloads and generated benchmark artifacts.
+# Provenance documentation belongs at benchmarks/<case>/README.md or in the
+# tracked registry, never beside an external geometry master.
+benchmarks/*/sources/**
+benchmarks/*/data/**
+benchmarks/*/results/**
+
+# Curated, public-safe retained-signature verification evidence.
+!benchmarks/results/
+!benchmarks/results/retained_signature_closing_audit/
+!benchmarks/results/retained_signature_closing_audit/*.csv
+!benchmarks/results/retained_signature_closing_audit/provenance.json

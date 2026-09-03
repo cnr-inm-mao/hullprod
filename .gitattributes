@@ -1,0 +1,17 @@
+* text=auto
+
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.sh text eol=lf
+
+# Preserve fixed-format and binary geometry fixtures byte-for-byte.
+*.iges binary
+*.igs binary
+*.step binary
+*.stp binary
+*.stl binary

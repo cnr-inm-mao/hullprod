@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+type: software
+message: "If you use HullProd in scientific work, please cite the software and the related publication when available."
+title: "HullProd: Geometry-Based Producibility Metrics for Ship Hull Forms"
+version: "1.0.0"
+authors:
+  - family-names: "Serani"
+    given-names: "Andrea"
+license: "BSD-3-Clause"
+repository-code: "https://github.com/cnr-inm-mao/hullprod"
+url: "https://github.com/cnr-inm-mao/hullprod"
+keywords:
+  - ship design
+  - hull forms
+  - producibility
+  - manufacturability
+  - geometry processing
+  - naval architecture

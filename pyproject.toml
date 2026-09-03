@@ -1,0 +1,89 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hullprod"
+dynamic = ["version"]
+description = "Geometry-based producibility assessment of ship hull forms from triangulated meshes and native IGES/STEP boundary representations."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+authors = [
+  {name = "Andrea Serani"}
+]
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+keywords = [
+  "ship design",
+  "hull forms",
+  "producibility",
+  "manufacturability",
+  "geometry processing",
+  "naval architecture"
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Manufacturing",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.9",
+  "trimesh>=4.0",
+  "matplotlib>=3.7",
+  "pandas>=1.5",
+  "cadquery-ocp>=7.9.3.1.1,<7.10"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "build>=1.2",
+  "twine>=5",
+  "ruff==0.16.4",
+  "vtk>=9.3",
+]
+benchmark = [
+  "networkx>=3.0",
+  "vtk>=9.3",
+]
+
+[project.urls]
+Homepage = "https://github.com/cnr-inm-mao/hullprod"
+Repository = "https://github.com/cnr-inm-mao/hullprod"
+Issues = "https://github.com/cnr-inm-mao/hullprod/issues"
+
+[project.scripts]
+hullprod = "hullprod.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hullprod*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "hullprod._version.__version__"}
+
+[tool.setuptools.package-data]
+"hullprod.examples" = ["*.iges", "*.stl"]
+
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = [
+  "E4",
+  "E7",
+  "E9",
+  "F",
+  "I",
+  "UP",
+  "B",
+  "RUF",
+]

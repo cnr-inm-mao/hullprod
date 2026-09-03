@@ -1,0 +1,2 @@
+include README.md LICENSE CITATION.cff CHANGELOG.md CONTRIBUTING.md
+recursive-include docs *.md

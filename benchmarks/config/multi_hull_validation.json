@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "campaign": "multi-hull-curvature-validation",
+  "canonical_frame": {
+    "axes": {
+      "x": "longitudinal, positive forward",
+      "y": "transverse, positive starboard",
+      "z": "vertical, positive upward"
+    },
+    "centerplane": "y = 0",
+    "origin_policy": "Case-specific translations are allowed and do not affect curvature metrics."
+  },
+  "tessellation_ladder": {
+    "coarse": {
+      "linear_deflection_over_lref": 0.0035,
+      "angular_deflection_rad": 0.3
+    },
+    "medium": {
+      "linear_deflection_over_lref": 0.00175,
+      "angular_deflection_rad": 0.25
+    },
+    "fine": {
+      "linear_deflection_over_lref": 0.000875,
+      "angular_deflection_rad": 0.2
+    }
+  },
+  "mesh_processing": {
+    "shape_healing": true,
+    "cad_sewing_tolerance_over_lref": 0.0001,
+    "minimum_transfer_component_area_over_lref2": 1e-12,
+    "relative_deflection": false,
+    "canonical_vertex_merge_digits": 9,
+    "mirroring_seam_tolerance_over_lref": 1e-06
+  },
+  "benchmarks": {
+    "dtmb5415": {
+      "campaign_status": "admitted",
+      "source": "benchmarks/dtmb5415/sources/nmri_cfdws2005/5415.igs",
+      "source_sha256": "dac17b470ddadce21ec5a55d9d544181ac13027dd8ceda39e26fe26219bbbc28",
+      "source_declared_unit": "m",
+      "ocp_coordinate_unit": "mm",
+      "ocp_to_physical_m": 0.001,
+      "lref_m": 5.72,
+      "lref_convention": "model Lpp",
+      "source_to_canonical_matrix": [[-1, 0, 0], [0, 1, 0], [0, 0, 1]],
+      "canonical_translation_m": [0, 0, 0],
+      "source_representation": "starboard half hull",
+      "selected_root_indices": [1, 2],
+      "selection_note": "Validated hull patches; root 3 is the separate transom omitted by the established DTMB protocol.",
+      "pair_policy": "mirror_half",
+      "seam_tolerance_over_lref": 1e-07
+    },
+    "kcs": {
+      "campaign_status": "admitted",
+      "source": "benchmarks/kcs/sources/nmri_cfdws2005/extracted/KCS.igs",
+      "source_sha256": "d86a12f86c2b0155d0950e0d59e1e3e203603ce5c78e8b7cbb788791f11d9678",
+      "cross_check_source": "benchmarks/kcs/sources/simman2020/extracted/KCS_hull_SVA.igs",
+      "cross_check_sha256": "6f5556b2b5e58e14e721eaf438fc2f7874e051c1a858d77d7aa837af17db917d",
+      "source_declared_unit": "mm",
+      "ocp_coordinate_unit": "mm",
+      "ocp_to_physical_m": 0.001,
+      "lref_m": 7.2786,
+      "lref_convention": "1:31.5994 model Lpp",
+      "source_to_canonical_matrix": [[-1, 0, 0], [0, 1, 0], [0, 0, 1]],
+      "canonical_translation_m": [0, 0, 0],
+      "source_representation": "starboard half hull, bare",
+      "selected_root_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
+      "selection_note": "All 18 NMRI bare-hull surface roots; rudder and propeller are separate sources.",
+      "pair_policy": "mirror_half",
+      "seam_tolerance_over_lref": 2e-05
+    },
+    "jbc": {
+      "campaign_status": "admitted",
+      "source": "benchmarks/jbc/sources/tokyo2015/extracted/jbc.igs",
+      "source_sha256": "2de08d290e98cc58842faa126f8245024615851fe849de0a49c0c3b74d61e9ab",
+      "source_declared_unit": "mm",
+      "ocp_coordinate_unit": "mm",
+      "ocp_to_physical_m": 0.001,
+      "lref_m": 7.0,
+      "lref_convention": "1:40 model Lpp",
+      "source_to_canonical_matrix": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+      "canonical_translation_m": [0, 0, 0],
+      "source_representation": "full symmetric bare hull",
+      "selected_root_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45],
+      "selection_note": "Official jbc.igs bare hull only; duct, propeller, boss, cap, and spacer masters are excluded.",
+      "pair_policy": "cut_full",
+      "seam_tolerance_over_lref": 1e-06
+    },
+    "kvlcc2": {
+      "campaign_status": "admitted",
+      "source": "benchmarks/kvlcc2/sources/simman2020/extracted/kvlcc2.igs",
+      "source_sha256": "ed06c287c7a858a182494cb101e2c322bb2c407994c646a95d9e9f811638e2f9",
+      "source_declared_unit": "mm (inconsistent with numeric coordinates)",
+      "ocp_coordinate_unit": "nominal mm; numeric values are interpreted as physical m",
+      "ocp_to_physical_m": 1.0,
+      "lref_m": 320.0,
+      "lref_convention": "full-scale Lpp",
+      "source_to_canonical_matrix": [[-1, 0, 0], [0, 1, 0], [0, 0, -1]],
+      "canonical_translation_m": [0, 0, 0],
+      "source_representation": "starboard half hull, bare",
+      "selected_root_indices": [3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+      "selection_note": "Exterior molded shell roots, including the baseline/flat-bottom closure. Curves 1-2 are excluded. Roots 3 and 6 are overlapping duplicate baseline surfaces; root 3 is retained and root 6 is excluded.",
+      "pair_policy": "mirror_half",
+      "seam_tolerance_over_lref": 0.0005
+    },
+    "kvlcc2m": {
+      "campaign_status": "admitted",
+      "source": "benchmarks/kvlcc2m/sources/nmri_cfdws2005/extracted/kvlcc2m.igs",
+      "source_sha256": "8cabc15e017b58551873f1c0f9a8fbc58a2bff76017e4022c0ffecaebcdceb97",
+      "source_declared_unit": "m",
+      "ocp_coordinate_unit": "mm",
+      "ocp_to_physical_m": 0.001,
+      "lref_m": 4.97,
+      "lref_convention": "model Lpp",
+      "source_to_canonical_matrix": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+      "canonical_translation_m": [0, 0, 0],
+      "source_representation": "full symmetric bare hull",
+      "selected_root_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+      "selection_note": "All 29 faired model-hull surface roots.",
+      "pair_policy": "cut_full",
+      "seam_tolerance_over_lref": 1e-06
+    },
+    "onrt": {
+      "campaign_status": "admitted_underbody",
+      "source": "benchmarks/onrt/sources/simman2020/extracted/onrt_wo_gap/onr5613-full_appendage_deckhous_mergedR.igs",
+      "source_sha256": "ff061ab8584e5b0a8965e02b2665940003ceeeb29b848c9684eb327afb7bab21",
+      "source_declared_unit": "m, with Lwl-normalized numeric coordinates",
+      "ocp_coordinate_unit": "mm after IGES metre conversion",
+      "ocp_to_physical_m": 0.003147,
+      "lref_m": 3.147,
+      "lref_convention": "model Lwl",
+      "source_to_canonical_matrix": [[-1, 0, 0], [0, 1, 0], [0, 0, 1]],
+      "canonical_translation_m": [0, 0, 0],
+      "source_representation": "full symmetric assembly",
+      "selected_iges_levels": [2],
+      "selection_note": "Rhino IGES level 2 is explicitly named 'underbody'; levels for appendages, deckhouse, geometry fixtures, and the 1.25-m model are excluded.",
+      "pair_policy": "cut_full",
+      "seam_tolerance_over_lref": 1e-06
+    },
+    "kvlcc1": {
+      "campaign_status": "extension",
+      "source": "benchmarks/kvlcc1/sources/simman2008/extracted/kvlcc1.igs",
+      "source_sha256": "8b38071bf58cd228e9c7988afc1267af38b4df7e27059d0630011dd2eecf6211",
+      "source_declared_unit": "mm (inconsistent with numeric coordinates)",
+      "ocp_coordinate_unit": "nominal mm; numeric values are interpreted as physical m",
+      "ocp_to_physical_m": 1.0,
+      "lref_m": 320.0,
+      "lref_convention": "full-scale Lpp",
+      "source_to_canonical_matrix": [[-1, 0, 0], [0, 1, 0], [0, 0, -1]],
+      "canonical_translation_m": [0, 0, 0],
+      "source_representation": "starboard half hull, bare",
+      "selected_root_indices": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "selection_note": "All 17 exterior shell roots, including the baseline/flat-bottom closure.",
+      "pair_policy": "mirror_half",
+      "seam_tolerance_over_lref": 0.0005
+    }
+  }
+}

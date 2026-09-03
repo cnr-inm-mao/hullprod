@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "campaign": "retained-signature-verification",
+  "representation": "authoritative_geometry_with_canonical_starboard_half_sections",
+  "resolutions": ["coarse", "medium", "fine"],
+  "headline_resolution": "fine",
+  "stations": 40,
+  "section_resample_points": 256,
+  "station_margin": 0.02,
+  "fft_cutoff_fraction": 0.25,
+  "h_threshold_factor": 0.0001,
+  "k_threshold_factor": 0.0001,
+  "section_side_policy": "starboard_half",
+  "cases": ["dtmb5415", "kcs", "jbc", "kvlcc2m"],
+  "map_cases": ["dtmb5415", "kcs", "jbc", "kvlcc2m"],
+  "map_resolution": "medium",
+  "notes": {
+    "campaign_scope": "Exactly four retained-signature public-hull cases.",
+    "wigley": "Retained only in separate analytical verification, not this campaign."
+  }
+}
