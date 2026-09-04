@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/cnr-inm-mao/hullprod/main/assets/branding/hullprod-logo-horizontal.png"
+    src="https://raw.githubusercontent.com/cnr-inm-mao/hullprod/main/assets/logos/hullprod-logo-horizontal.png"
     alt="HullProd logo"
     width="420"
   >
