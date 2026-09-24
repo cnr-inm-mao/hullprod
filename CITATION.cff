@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 type: software
-message: "If you use HullProd in scientific work, please cite the software and the related publication when available."
+message: "For scientific use of HullProd, please cite the paper specified in preferred-citation."
 title: "HullProd: Geometry-Based Producibility Metrics for Ship Hull Forms"
 version: "1.0.1"
 date-released: 2026-09-03
@@ -20,3 +20,18 @@ keywords:
   - manufacturability
   - geometry processing
   - naval architecture
+
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Serani"
+      given-names: "Andrea"
+      orcid: "https://orcid.org/0000-0002-8814-1793"
+    - family-names: "Maki"
+      given-names: "Kevin J."
+      orcid: "https://orcid.org/0000-0001-7286-7402"
+  title: "Geometry-Based Metrics for Early-Stage Hull-Form Producibility Screening"
+  journal: "arXiv"
+  year: 2026
+  doi: "10.48550/arXiv.2609.27544"
+  url: "https://arxiv.org/abs/2609.27544"

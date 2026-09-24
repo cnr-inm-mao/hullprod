@@ -140,6 +140,7 @@ See the [Python API guide](docs/python-api.md).
 
 ## Documentation
 
+- [Theory, implementation and user manual (PDF)](docs/manual/HullProd_Manual.pdf)
 - [Getting started](docs/getting-started.md)
 - [Recommended metrics](docs/metrics.md)
 - [Result files and field exports](docs/outputs.md)
@@ -148,8 +149,9 @@ See the [Python API guide](docs/python-api.md).
 - [Experimental quantities](docs/experimental.md)
 - [Release history](CHANGELOG.md)
 
-README plus versioned Markdown under `docs/` are the complete v1 documentation
-system; no hosted documentation site is required.
+Documentation comprises this README, the versioned Markdown guides under
+`docs/`, and the illustrated PDF manual. The manual covers the implemented
+metrics, numerical backends, CLI and Python usage, and verification examples.
 
 ## Scientific scope and limitations
 
@@ -175,16 +177,15 @@ Naval Research.
 
 ## Citation
 
-If you use HullProd in scientific work, please cite the archived software
-release:
+For scientific use of HullProd, please cite the companion paper:
 
-> Serani, A. (2026). *HullProd: Geometry-Based Producibility Metrics for Ship
-> Hull Forms* (Version 1.0.1) [Computer software]. Zenodo.
-> https://doi.org/10.5281/zenodo.22288105
+> Serani, A., & Maki, K. J. (2026). *Geometry-Based Metrics for Early-Stage
+> Hull-Form Producibility Screening*. arXiv:2609.27544.
+> https://arxiv.org/abs/2609.27544
+> DOI: https://doi.org/10.48550/arXiv.2609.27544
 
-Machine-readable citation metadata are provided in
-[CITATION.cff](CITATION.cff). Please also cite the associated scientific
-publication once its final journal metadata are available.
+This paper is the preferred scientific citation in [CITATION.cff](CITATION.cff).
+Software version and archive metadata are retained for reproducibility.
 
 ## Contributing
 
